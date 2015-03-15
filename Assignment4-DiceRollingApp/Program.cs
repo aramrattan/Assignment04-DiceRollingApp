@@ -10,13 +10,12 @@ namespace Assignment4_DiceRollingApp
     {
         static void Main(string[] args)
         {
+
             Random rnd = new Random();
             int firstDie = 0;
             int secondDie = 0;
             int sum;
             int[] sumArray = new int[11];
-            //Check to see if the array adds properly
-            int sumOf2=0, sumOf3=0, sumOf4=0, sumOf5=0, sumOf6=0, sumOf7=0, sumOf8=0, sumOf9=0, sumOf10=0, sumOf11=0, sumOf12=0;
 
             for (int i = 0; i < 36000; i++)
 			{
@@ -24,73 +23,61 @@ namespace Assignment4_DiceRollingApp
             firstDie = rnd.Next(1, 7);
             secondDie = rnd.Next(1, 7);
             sum = firstDie + secondDie;
-                //diplays what the dice roll and the sum.
-            Console.WriteLine("{0} {1} {2}", firstDie, secondDie, sum);
+             
+            //switch statement to add up how many times each value is achieved
             switch (sum)
             {
                 case 2:
-                    sumOf2++;
                     sumArray[0]++;
                     break;
 
                 case 3:
                     sumArray[1]++;
-                    sumOf3++;
                     break;
                 case 4:
                     sumArray[2]++;
-                    sumOf4++;
                     break;
                 case 5:
                     sumArray[3]++;
-                    sumOf5++;
                     break;
                 case 6:
                     sumArray[4]++;
-                    sumOf6++;
                     break;
                 case 7:
                     sumArray[5]++;
-                    sumOf7++;
                     break;
                 case 8:
                     sumArray[6]++;
-                    sumOf8++;
                     break;
                 case 9:
                     sumArray[7]++;
-                    sumOf9++;
                     break;
                 case 10:
                     sumArray[8]++;
-                    sumOf10++;
                     break;
                 case 11:
                     sumArray[9]++;
-                    sumOf11++;
                     break;
                 case 12:
                     sumArray[10]++;
-                    sumOf12++;
                     break;
             }
                 
 
             }
+            //Displaying of the sums
             Console.WriteLine();
             Console.WriteLine("***********************************");
             Console.WriteLine("****         TOTAL SUMS        ****");
             Console.WriteLine("***********************************");
             Console.WriteLine();
             
-
+            //For loop to go through each index in the array and display its value
             for (int index = 0; index < sumArray.Length; index++)
             {
                 Console.WriteLine("** {0}: {1} ", index+2, sumArray[index]);
             }
 
-            //Check to see if displayed array values are correct
-            Console.WriteLine("{0} * {1} * {2} * {3} * {4} * {5} * {6} * {7} * {8} * {9} * {10}", sumOf2, sumOf3, sumOf4,sumOf5, sumOf6, sumOf7, sumOf8, sumOf9, sumOf10, sumOf11, sumOf12);
             
 
             WaitForKey();
