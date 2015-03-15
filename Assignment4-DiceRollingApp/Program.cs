@@ -10,13 +10,14 @@ namespace Assignment4_DiceRollingApp
     {
         static void Main(string[] args)
         {
-
+            //varibles needed
             Random rnd = new Random();
             int firstDie = 0;
             int secondDie = 0;
             int sum;
             int[] sumArray = new int[11];
 
+            //for loop to roll the dice 36000 times
             for (int i = 0; i < 36000; i++)
 			{
 			 
