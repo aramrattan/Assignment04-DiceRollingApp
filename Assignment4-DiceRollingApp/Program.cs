@@ -88,6 +88,9 @@ namespace Assignment4_DiceRollingApp
             {
                 Console.WriteLine("** {0}: {1} ", index+2, sumArray[index]);
             }
+
+            //Check to see if displayed array values are correct
+            Console.WriteLine("{0} * {1} * {2} * {3} * {4} * {5} * {6} * {7} * {8} * {9} * {10}", sumOf2, sumOf3, sumOf4,sumOf5, sumOf6, sumOf7, sumOf8, sumOf9, sumOf10, sumOf11, sumOf12);
             
 
             WaitForKey();
